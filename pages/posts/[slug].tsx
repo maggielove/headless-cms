@@ -9,6 +9,7 @@ import Header from "../../components/header";
 import PostHeader from "../../components/post-header";
 import SectionSeparator from "../../components/section-separator";
 import Layout from "../../components/layout";
+import CoverImage from "./cover-image";
 import PostTitle from "../../components/post-title";
 import Tags from "../../components/tags";
 import { getAllPostsWithSlug, getPostAndMorePosts } from "../../lib/api";
@@ -45,6 +46,7 @@ export default function Post({ post, posts, preview }) {
                 coverImage={post.featuredImage}
                 date={post.date}
                 author={post.author}
+                guestAuthor={post.guestAuthor}
                 categories={post.categories}
               />
               <PostBody content={post.content} />

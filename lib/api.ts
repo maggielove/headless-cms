@@ -74,6 +74,7 @@ export async function getAllPostsForHome(preview) {
                 sourceUrl
               }
             }
+            guestAuthor
             author {
               node {
                 name
@@ -129,6 +130,7 @@ export async function getPostAndMorePosts(slug, preview, previewData) {
           sourceUrl
         }
       }
+      guestAuthor
       author {
         node {
           ...AuthorFields
