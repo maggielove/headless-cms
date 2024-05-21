@@ -18,13 +18,13 @@ export default function Index({ allPosts: { edges }, preview }) {
         <title>{`Next.js Blog Example with ${CMS_NAME}`}</title>
       </Head>
       <Container>
-        <Intro />
         {heroPost && (
           <HeroPost
             title={heroPost.title}
             coverImage={heroPost.featuredImage}
             date={heroPost.date}
             author={heroPost.author}
+            guestAuthor={heroPost.guestAuthor}
             slug={heroPost.slug}
             excerpt={heroPost.excerpt}
           />
