@@ -26,6 +26,25 @@ async function fetchAPI(query = "", { variables }: Record<string, any> = {}) {
   return json.data;
 }
 
+export async function getAboutPage() {
+  const data = await fetchAPI(
+    `
+    query AboutPage {
+      pages(first: 1, where: { title: "About" }) {
+        edges {
+          node {
+            id
+            title
+            date
+            content
+          }
+        }
+      }
+    }`
+  );
+  return data.pages;
+}
+
 export async function getPreviewPost(id, idType = "DATABASE_ID") {
   const data = await fetchAPI(
     `
@@ -194,7 +213,7 @@ export async function getPostAndMorePosts(slug, preview, previewData) {
     },
   );
 
-  // Draft posts may not have an slug
+  // Draft posts may not have a slug
   if (isDraft) data.post.slug = postPreview.id;
   // Apply a revision (changes in a published post)
   if (isRevision && data.post.revisions) {
