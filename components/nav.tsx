@@ -12,12 +12,12 @@ export default function Nav() {
       </div>
       <div class="flex flex-row justify-between w-full">
         <Link
-          href={`/`}
+          href={`/fiction`}
           className="flex text-base font-bold uppercase hover:underline"
           dangerouslySetInnerHTML={{ __html: `Fiction` }}
         ></Link>
         <Link
-          href={`/`}
+          href={`/poetry`}
           className="flex text-base font-bold uppercase hover:underline"
           dangerouslySetInnerHTML={{ __html: `Poetry` }}
         ></Link>

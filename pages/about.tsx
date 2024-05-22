@@ -23,8 +23,6 @@ export default function About({pages}) {
 export const getStaticProps: GetStaticProps = async () => {
   const pages = await getAboutPage();
 
-  console.log(`pages~ `, pages);
-
   return {
     props: { pages }
   };

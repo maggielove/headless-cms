@@ -42,7 +42,38 @@ export async function getAboutPage() {
       }
     }`
   );
-  return data.pages;
+  return data?.pages;
+}
+
+export async function getCategoryPosts(category) {
+  const data = await fetchAPI(
+    `
+    query CategoryPosts($category: String) {
+      posts(first: 20, where: { categoryName: $category, orderby: { field: DATE, order: DESC } }) {
+        edges {
+          node {
+            title
+            excerpt
+            slug
+            date
+            featuredImage {
+              node {
+                sourceUrl
+              }
+            }
+            guestAuthor
+          }
+        }
+      }
+    }`,
+    {
+      variables: {
+        category
+      },
+    }
+  );
+
+  return data?.posts;
 }
 
 export async function getPreviewPost(id, idType = "DATABASE_ID") {
