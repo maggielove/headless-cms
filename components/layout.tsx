@@ -1,5 +1,6 @@
 import Alert from "./alert";
 import Nav from "./nav";
+import MobileNav from "./nav-mobile";
 import Footer from "./footer";
 import Meta from "./meta";
 
@@ -9,7 +10,8 @@ export default function Layout({ preview, children }) {
       <Meta />
       <div className="min-h-screen">
         <Alert preview={preview} />
-        <Nav />
+        <Nav className="hidden sm:block" />
+        <MobileNav />
         <main>{children}</main>
       </div>
       <Footer />

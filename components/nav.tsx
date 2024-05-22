@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Nav() {
   return (
-    <div className="h-50 p-6 mb-16 border-b-2 border-black">
+    <div className="hidden sm:block h-50 p-6 mb-16 border-b-2 border-black">
       <div className="w-full">
         <Link
           href={`/`}
@@ -22,12 +22,12 @@ export default function Nav() {
           dangerouslySetInnerHTML={{ __html: `Poetry` }}
         ></Link>
         <Link
-          href={`/`}
+          href={`/interviews`}
           className="flex text-base font-bold uppercase hover:underline"
           dangerouslySetInnerHTML={{ __html: `Interviews` }}
         ></Link>
         <Link
-          href={`/`}
+          href={`/store`}
           className="flex text-base font-bold uppercase hover:underline"
           dangerouslySetInnerHTML={{ __html: `Store` }}
         ></Link>
