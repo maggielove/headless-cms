@@ -15,8 +15,8 @@ export default function Footer() {
             <div className="flex flex-col items-center lg:pl-4">
               <p className="text-2xl font-bold">Follow Us</p>
               <ul>
-                <li className="text-2xl"><a href="">X</a></li>
-                <li className="text-2xl" a href="">Instagram</li>
+                <li className="text-2xl"><a href="https://twitter.com/faultline_journ">X</a></li>
+                <li className="text-2xl"><a href="https://www.instagram.com/faultlinemag">Instagram</a></li>
               </ul>
             </div>
           </div>

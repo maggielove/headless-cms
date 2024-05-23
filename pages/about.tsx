@@ -12,7 +12,7 @@ export default function About({pages}) {
     <Layout>
       <div className={styles.content}>
         <h2 className="text-2xl mb-8">{pageTitle}</h2>
-        <div className="h-8 w-100 text-xl leading-6"
+        <div className="h-8 w-100 text-xl leading-6 h-min"
           dangerouslySetInnerHTML={{ __html: pages?.edges[0]?.node?.content }}>
         </div>
       </div>
