@@ -2,9 +2,9 @@ import { GetStaticProps } from "next";
 import { getCategoryPosts } from "../lib/api";
 import ListLayout from "../components/list-layout";
 
-export default function Poetry({ posts }) {
+export default function Poetry({ posts, preview }) {
   return (
-    <ListLayout categoryTitle="Poetry" posts={posts} />
+    <ListLayout categoryTitle="Poetry" posts={posts} preview={preview} />
   );
 }
 

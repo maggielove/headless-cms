@@ -2,10 +2,10 @@ import { GetStaticProps } from "next";
 import Layout from "../components/layout";
 import styles from "./store.module.css";
 
-export default function Store({ posts }) {
+export default function Store({ posts, preview }) {
   //TODO pass preview prop to Layout
   return (
-    <Layout>
+    <Layout preview={preview}>
       <div className={styles.content}>
         <h2 className="text-2xl mb-8">Coming Soon!</h2>
         <p className="text-xl">In the meantime, you can order a new copy of the journal by sending

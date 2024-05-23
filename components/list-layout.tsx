@@ -5,7 +5,7 @@ import MoreStories from "./more-stories";
 import Container from "./container";
 import Head from "next/head";
 
-export default function ListLayout({ categoryTitle, preview, posts : { edges } }) {
+export default function ListLayout({ categoryTitle = null, preview, posts : { edges } }) {
   const heroPost = edges[0]?.node;
   const morePosts = edges.slice(1);
 

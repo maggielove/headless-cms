@@ -34,7 +34,7 @@ export default function PostPreview({
         dangerouslySetInnerHTML={{ __html: excerpt }}
       />
       {/*<Avatar author={author} /> */}
-      <p class="text-2xl font-bold">{guestAuthor}</p>
+      <p className="text-2xl font-bold">{guestAuthor}</p>
     </div>
   );
 }

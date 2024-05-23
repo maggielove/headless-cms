@@ -10,7 +10,7 @@ export default function Nav() {
           dangerouslySetInnerHTML={{ __html: `Faultline` }}
         ></Link>
       </div>
-      <div class="flex flex-row justify-between w-full">
+      <div className="flex flex-row justify-between w-full">
         <Link
           href={`/fiction`}
           className="flex text-base font-bold uppercase hover:underline"

@@ -17,7 +17,7 @@ export default function PostHeader({
       <PostTitle>{title}</PostTitle>
       <div className="hidden md:block md:mb-12">
         {/* <Avatar author={author} /> */}
-        <p class="text-2xl font-bold">{guestAuthor}</p>
+        <p className="text-2xl font-bold">{guestAuthor}</p>
       </div>
       <div className="max-w-2xl mx-auto">
         <div className="block md:hidden mb-6">
